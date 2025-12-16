@@ -1,0 +1,99 @@
+@import "../styles/common.css";
+
+/* ================= PAGE ================= */
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ================= CARD ================= */
+.notfound-wrapper {
+  max-width: 700px;
+  width: 100%;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* ================= VISUAL ================= */
+.notfound-visual {
+  height: 320px;
+  background-image: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.notfound-visual h1 {
+  font-size: 88px;
+  font-weight: 700;
+  margin-top: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed,
+    #ec4899
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= CONTENT ================= */
+.notfound-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.notfound-content p {
+  font-size: 14.5px;
+  color: #334155;
+  margin-bottom: 26px;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .notfound-wrapper {
+    padding: 40px 20px;
+  }
+
+  .notfound-visual {
+    height: 240px;
+  }
+
+  .notfound-visual h1 {
+    font-size: 64px;
+  }
+}

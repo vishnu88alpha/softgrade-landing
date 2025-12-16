@@ -1,0 +1,186 @@
+@import "../styles/common.css";
+
+/* ================= HEADER ================= */
+/* ================= HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 40px;
+
+  /* Gradient background */
+background: linear-gradient(
+  135deg,
+  rgba(37, 99, 235, 0.25),
+  rgba(124, 58, 237, 0.22),
+  rgba(236, 72, 153, 0.2)
+);
+
+
+
+
+  /* Glass effect */
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+
+/* ================= LOGO ================= */
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed,
+    #ec4899
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= NAV ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+/* ================= LINKS ================= */
+.nav-links a,
+.dropdown-label {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+/* Hover underline */
+.nav-links a::after,
+.dropdown-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed
+  );
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.dropdown-label:hover::after {
+  width: 100%;
+}
+
+/* Active route */
+.nav-links a.active {
+  color: #7c3aed;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 11px;
+  margin-left: 4px;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate arrow when open */
+.dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* ================= DROPDOWN MENU ================= */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+
+  min-width: 240px;
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  box-shadow:
+    0 20px 40px rgba(2, 6, 23, 0.12);
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+}
+
+/* Show menu */
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0f172a;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.12),
+    rgba(124, 58, 237, 0.12)
+  );
+  color: #2563eb;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .header {
+    padding: 14px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}

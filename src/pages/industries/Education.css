@@ -1,0 +1,99 @@
+@import "../../styles/common.css";
+
+/* ================= INDUSTRY PAGE ================= */
+.industry {
+  padding-bottom: 100px;
+}
+
+/* ================= HERO ================= */
+.industry-hero {
+  padding: 90px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.industry-hero-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+}
+
+.industry-hero h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.industry-hero p {
+  max-width: 780px;
+  margin: auto;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* ================= OVERVIEW ================= */
+.industry-overview {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+.industry-card {
+  padding: 40px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+/* ================= GRID ================= */
+.industry-grid {
+  max-width: 1100px;
+  margin: 90px auto 0;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* ================= TILE ================= */
+.industry-tile {
+  padding: 36px;
+}
+
+.industry-tile h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.industry-tile p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* ================= ICON ================= */
+.tile-icon {
+  width: 40px;
+  height: 40px;
+  color: #7c3aed;
+  margin-bottom: 14px;
+}
+
+/* ================= REVEAL ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .industry-hero h1 {
+    font-size: 30px;
+  }
+}
