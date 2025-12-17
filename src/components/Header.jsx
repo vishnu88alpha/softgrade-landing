@@ -1,31 +1,51 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import "./Header.css";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
-  const closeMenu = () => setOpenMenu(null);
+  const closeMenu = () => {
+    setOpenMenu(null);
+    setMobileOpen(false);
+  };
 
   return (
     <header className="header">
+      {/* Logo */}
       <div className="logo">Softgrade Solutions Pvt Ltd</div>
 
+      {/* Mobile Toggle */}
+      <button
+        className="menu-toggle"
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label="Toggle navigation"
+      >
+        {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+      </button>
+
+      {/* Navigation */}
       <nav>
-        <ul className="nav-links">
+        <ul className={`nav-links ${mobileOpen ? "open" : ""}`}>
           <li>
-            <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
+            <NavLink to="/" end onClick={closeMenu}>
+              Home
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+            <NavLink to="/about" onClick={closeMenu}>
+              About
+            </NavLink>
           </li>
 
-          {/* ===== Services ===== */}
+          {/* Services */}
           <li className={`dropdown ${openMenu === "services" ? "open" : ""}`}>
             <span
               className="dropdown-label"
@@ -43,7 +63,7 @@ const Header = () => {
             </ul>
           </li>
 
-          {/* ===== Industries ===== */}
+          {/* Industries */}
           <li className={`dropdown ${openMenu === "industries" ? "open" : ""}`}>
             <span
               className="dropdown-label"
@@ -60,7 +80,7 @@ const Header = () => {
             </ul>
           </li>
 
-          {/* ===== Technologies ===== */}
+          {/* Technologies */}
           <li className={`dropdown ${openMenu === "technologies" ? "open" : ""}`}>
             <span
               className="dropdown-label"
@@ -77,7 +97,9 @@ const Header = () => {
           </li>
 
           <li>
-            <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>

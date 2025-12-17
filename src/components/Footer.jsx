@@ -35,15 +35,16 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Contact</h4>
 
-          <p><Phone size={16} /> +91 78937 58905</p>
+          <p><Phone size={16} /> +91 9347874316</p>
           <p><Clock size={16} /> Monday – Friday</p>
           <p>10:00 AM – 06:00 PM</p>
 
           <p className="address">
             <MapPin size={16} />
-            2-41/13/PMR/5F, MELKIORS PRIDE, 5th Floor,<br />
-            Izzath Nagar, Khanamet,<br />
-            Hyderabad, Telangana – 500081
+          SURVEY NO: 93, KOTARLAPALLI(VIL),<br />
+            49 KOTHAPALLI MITTA(POST),<br />
+            SR PURAM(MOM)<br/>
+            CHITTOOR, ANDHAR PRADESH - 517167
           </p>
         </div>
 

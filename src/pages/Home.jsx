@@ -1,7 +1,16 @@
 import "./Home.css";
 import banner from "../assets/banner.webp";
-import { Rocket, ShieldCheck, Lightbulb, Users, Layers, Cpu } from "lucide-react";
+import {
+  Rocket,
+  ShieldCheck,
+  Lightbulb,
+  Users,
+  Layers,
+  Cpu,
+} from "lucide-react";
 import useReveal from "../hooks/useReveal";
+
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const r1 = useReveal();
@@ -21,8 +30,16 @@ const Home = () => {
           <p>Delivering value through innovation & execution</p>
 
           <div className="banner-cta">
-            <button className="btn-gradient btn-lg">Get Started</button>
-            <button className="btn-outline">Contact Us</button>
+            <Link
+              to="/services/application-development"
+              className="btn-gradient btn-lg"
+            >
+              Get Started
+            </Link>
+
+            <Link to="/contact" className="btn-outline">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
@@ -84,7 +101,7 @@ const Home = () => {
           <p>Years Experience</p>
         </div>
         <div className="stat glass-card">
-          <h3>150+</h3>
+          <h3>60+</h3>
           <p>Projects Delivered</p>
         </div>
         <div className="stat glass-card">
