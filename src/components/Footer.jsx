@@ -41,10 +41,10 @@ const Footer = () => {
 
           <p className="address">
             <MapPin size={16} />
-          SURVEY NO: 93, KOTARLAPALLI(VIL),<br />
-            49 KOTHAPALLI MITTA(POST),<br />
-            SR PURAM(MOM)<br/>
-            CHITTOOR, ANDHAR PRADESH - 517167
+          3rd FLOOR, SIGMA ARCADE,G3/G4,<br />
+            HAL OLD AIRPORT RD, NEAR TULASI THEATER,<br />
+            MARATHAHALLI VILLAGE,<br/>
+            MARATHAHALLI, BENGALURU, KARNATAKA - 560037
           </p>
         </div>
 

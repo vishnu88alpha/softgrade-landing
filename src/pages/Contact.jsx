@@ -93,13 +93,13 @@ const Contact = () => {
               <div>
                 <strong>Head Office – India</strong>
                 <p>
-                  SURVEY NO: 93, KOTARLAPALLI (VIL),
+                  2rd FLOOR, SIGMA ARCADE,G3/G4,
                   <br />
-                  49 KOTHAPALLI MITTA (POST),
+                  HAL OLD AIRPORT RD, NEAR TULASI THEATER,
                   <br />
-                  SR PURAM (MON),
+                  MARATHAHALLI VILLAGE,
                   <br />
-                  CHITTOOR, Andhra Pradesh – 517167
+                  MARATHALLI, BENGALURU, KARNATAKA - 560037
                 </p>
               </div>
             </div>
